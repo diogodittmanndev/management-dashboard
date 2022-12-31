@@ -16,37 +16,59 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        <div class="s-menu">
-            <div class="s-menu__item">
-                <a href="#">
-                    <i class="fa-sharp fa-solid fa-desktop"></i>Dashboard
-                </a>
+
+    <div class="wrapper">
+        <aside>
+            <div class="sidebar__menu-btn">
+                <i class="fas fa-bars"></i>
             </div>
-            <div class="s-menu__item">
-                <a href="#" class="s-menu__btn">
-                    <i class="fa-sharp fa-solid fa-table-list"></i>
-                    Forms
-                    <i class="fas fa-angle-right dropdown"></i>
-                </a>
-                <div class="s-submenu">
-                    <a href="#" class="s-submenu__item">Sub Item 01</a>
-                    <a href="#" class="s-submenu__item">Sub Item 02</a>
-                    <a href="#" class="s-submenu__item">Sub Item 03</a>
+
+            <div class="sidebar">
+                <div class="sidebar__close-btn">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="s-menu">
+                    <div class="s-menu__item">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-desktop"></i>Dashboard
+                        </a>
+                    </div>
+                    <div class="s-menu__item">
+                        <a href="#" class="s-menu__btn">
+                            <i class="fa-sharp fa-solid fa-table-list"></i>
+                            Cadastro
+                            <i class="fas fa-angle-right dropdown"></i>
+                        </a>
+                        <div class="s-submenu">
+                            <a href="#" class="s-submenu__item">Cadastro de Veículos</a>
+                            <a href="#" class="s-submenu__item">Cadastro de Fornecedores</a>
+                            <a href="#" class="s-submenu__item">Cadastro de Funcionários</a>
+                        </div>
+                    </div>
+                    <div class="s-menu__item">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-gear"></i>Configurações
+                        </a>
+                    </div>
+                    <div class="s-menu__item">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-circle-info"></i>Sobre
+                        </a>
+                    </div>
+                    <div class="s-menu__item logout">
+                        <a href="#">
+                            <i class="fa-sharp fa-solid fa-right-from-bracket"></i>Logout
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="s-menu__item">
-                <a href="#">
-                    <i class="fa-sharp fa-solid fa-gear"></i>Settings
-                </a>
-            </div>
-            <div class="s-menu__item">
-                <a href="#">
-                    <i class="fa-sharp fa-solid fa-circle-info"></i>About
-                </a>
-            </div>
-        </div>
+        </aside>
+
+        <main class="main">
+            <h1>DASHBOARD</h1>
+        </main>
     </div>
+
     <script src="index.js"></script>
 </body>
 

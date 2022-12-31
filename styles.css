@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --primary-color : #e5e5e5;
-    --secondary-color : #a2a9af;
-    --tertiary-color : #f1dbda;
-    --quaternary-color : #ededf2;
+    --primary-color : #7380EC;
+    --white-color : #FFF;
+    --primary-color-variant : #111E88;
+    --dark-color : #363949;
+    --background-color: #f6f6f9;
+    --light-color: rgba(132, 139, 200, 0.18);
 }
 
 * {
@@ -18,21 +20,39 @@
 body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-color)
+    background-color: var(--background-color);
+}
+
+.container {
+    position: relative;
 }
 
 .sidebar {
-    background-color: var(--secondary-color);
+    background-color: var(--white-color);
     height: 100vh;
-    width: 250px;
+    width: 290px;
     position: fixed;
     top: 0;
+    left: -100%;
+    transition: 0.7s ease;
+    border-radius: 15px;
+    box-shadow:
+    7.2px 11.2px 14.8px -20px rgba(0, 0, 0, 0.026),
+    24.1px 37.7px 63.2px -20px rgba(0, 0, 0, 0.037),
+    108px 169px 185px -20px rgba(0, 0, 0, 0.11)
+;
+}
+
+/* Class added with JQuery */
+.sidebar.active {
     left: 0;
 }
 
 .s-menu {
     width: 100%;
     margin-top: 70px;
+    height: 100vh;
+    transition-property: left;
 }
 
 .s-menu__item {
@@ -41,20 +61,27 @@ body {
 }
 
 .s-menu__item a {
-    color: #fff;
+    color: var(--dark-color);
     font-size: 15px;
     text-decoration: none;
     display: block;
     line-height: 60px;
     transition: .3s ease;
     padding: 3px 20px;
-    
+    font-size: .9em;
+}
+
+.logout{
+    position: absolute;
+    width: 100%;
+    bottom: 15px;
 }
 
 .s-menu__item a:hover {
-    color: var(--secondary-color);
-    background-color: var(--tertiary-color);
-    letter-spacing: 1px;
+    color: var(--primary-color);
+    background-color: var(--light-color);
+    letter-spacing: .8px;
+    border-left: 5px solid var(--primary-color);
 }
 
 .s-menu__item a i {
@@ -69,8 +96,7 @@ body {
 }
 
 .s-submenu__item {
-    background-color: var(--quaternary-color);
-    color: var(--secondary-color) !important;
+    background-color: var(--light-color);
     padding-left: 50px !important;
 }
 
@@ -82,3 +108,46 @@ body {
 .rotate {
     transform: rotate(90deg);
 }
+
+/* === CLOSE BUTTON ===*/
+.sidebar__close-btn {
+    position:  absolute;
+    color: var(--dark-color);
+    font-size: 20px;
+    right: 0;
+    margin: 25px;
+    cursor: pointer;
+    transition: .5s ease;
+    
+}
+
+.sidebar__close-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.5)
+}
+/* === CLOSE BUTTON ===*/
+
+/* === MENU BUTTON ===*/
+.sidebar__menu-btn {
+    position: absolute;
+    color: var(--dark-color);
+    font-size: 20px;
+    margin: 25px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+
+.sidebar__menu-btn:hover {
+    color: var(--primary-color);
+    transform: scale(1.5)
+}
+/* === MENU BUTTON ===*/
+
+.main {
+    left: 0;
+}
+
+.main.active {
+
+    left: 300px;
+} 
