@@ -73,3 +73,12 @@ body {
     color: var(--secondary-color) !important;
     padding-left: 50px !important;
 }
+
+.s-submenu {
+    display: none;
+}
+
+/* Class added with JQuery */
+.rotate {
+    transform: rotate(90deg);
+}
